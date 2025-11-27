@@ -29,7 +29,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with: 
          name: trigger.txt
-         path: nodejs-sonar-app/trigger.txt
+         path: /home/runner/work/nodejs-sonar-app/nodejs-sonar-app
       - name: Build code 
         run: npm run build 
 
