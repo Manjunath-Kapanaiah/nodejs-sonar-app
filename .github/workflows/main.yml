@@ -1,7 +1,7 @@
 name: Node.js CI with SonarCloud
 
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # This enables the "Run workflow" button
   push:
     branches: [ "main" ]
   pull_request:
