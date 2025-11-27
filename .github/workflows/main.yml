@@ -13,8 +13,8 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      SONAR_PROJECT_KEY: Manjunath-Kapanaiah_REMOTE
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN2 }}
+      SONAR_PROJECT_KEY: Manjunath-Kapanaiah_nodejs-sonar-app
       SONAR_ORG: manjunath-kapanaiah
       SONAR_HOST_URL: https://sonarcloud.io
 
@@ -48,7 +48,7 @@ jobs:
           const scanner = require('sonarqube-scanner');
           scanner({
             serverUrl: process.env.SONAR_HOST_URL,
-            token: process.env.SONAR_TOKEN,
+            token: process.env.SONAR_TOKEN2,
             options: {
               'sonar.projectKey': '${{ env.SONAR_PROJECT_KEY }}',
               'sonar.organization': '${{ env.SONAR_ORG }}',
