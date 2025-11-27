@@ -21,11 +21,15 @@ jobs:
         run: npm ci 
       - name: Run tests 
         run: npm test
+      - name: Debug folder structure
+        run:
+          pwd
+          ls -R
       - name: upload the report to github repo 
         uses: actions/upload-artifact@v4
         with: 
          name: trigger.txt
-         path: https://github.com/Manjunath-Kapanaiah/nodejs-sonar-app/blob/main/trigger.txt
+         path: nodejs-sonar-app/trigger.txt
       - name: Build code 
         run: npm run build 
 
