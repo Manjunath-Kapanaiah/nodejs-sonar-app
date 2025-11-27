@@ -1,5 +1,6 @@
 name: UPLOAD REPORT
-on: 
+on:
+ workflow_dispatch:
  push:
   branches:
    - master
