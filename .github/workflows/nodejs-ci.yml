@@ -1,44 +1,27 @@
-name: Build and SonarScan
-
-on:
-  workflow_dispatch:  # This enables the "Run workflow" button
-  push:
-    branches:
-      - main
-  pull_request:
-    types: [opened, synchronize, reopened]
-jobs:
-  sonarqube:
-    runs-on: ubuntu-latest
-
-    steps:
-      # 1. Checkout
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      # 2. Setup Node.js
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+name: build nodeJS application
+on: 
+ push:
+  branches:
+   - master
+jobs: 
+  buildJob:
+    runs-on: ubuntu-latest 
+    steps: 
+      - name: Clone the Repo 
+        uses: actions/checkout@v5 
+      - name: Install nodejs
+        uses: actions/setup-node@v5
         with:
           node-version: '18'
-
-      # 3. Install dependencies
+          cache: 'npm'
       - name: Install dependencies
-        run: npm install
-
-      # 4. Build the project
-      - name: Build project
-        run: npm run build
-
-      # 5. Run SonarCloud analysis
-      - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v6
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN2 }}
-        with:
-          args: >
-            -Dsonar.projectKey=Manjunath-Kapanaiah_nodejs-sonar-app
-            -Dsonar.organization=manjunath-kapanaiah
-            -Dsonar.host.url=https://sonarcloud.io
-            -Dsonar.sources=src
+        run: npm ci 
+      - name: Run tests 
+        run: npm test
+      - name: upload the report to github repo 
+        uses: actions/upload-artifact@v4
+        with: 
+         name: test.json
+         path: /home/runner/work/Nodejs-GithubActions/Nodejs-GithubActions/test.json
+      - name: Build code 
+        run: npm run build 
