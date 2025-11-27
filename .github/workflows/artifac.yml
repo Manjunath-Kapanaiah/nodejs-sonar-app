@@ -1,9 +1,12 @@
 name: Upload Reports
 
 on:
+  workflow_dispatch:  # This enables the "Run workflow" button
   push:
     branches:
-      - master
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
 
 jobs:
   buildjob:
