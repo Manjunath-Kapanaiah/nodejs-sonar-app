@@ -38,7 +38,7 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=Manjunath-Kapanaiah_REMOTE
+            -Dsonar.projectKey=Manjunath-Kapanaiah_nodejs-sonar-app
             -Dsonar.organization=manjunath-kapanaiah
             -Dsonar.host.url=https://sonarcloud.io
             -Dsonar.sources=src
