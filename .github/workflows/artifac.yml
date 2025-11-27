@@ -24,8 +24,8 @@ jobs:
       - name: upload the report to github repo 
         uses: actions/upload-artifact@v4
         with: 
-         name: test.json
-         path: /home/runner/work/Nodejs-GithubActions/Nodejs-GithubActions/test.json
+         name: README.md
+         path: /REMOTE/README.md
       - name: Build code 
         run: npm run build 
 
