@@ -1,6 +1,7 @@
 name: Build_SONAR_MAIN
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
