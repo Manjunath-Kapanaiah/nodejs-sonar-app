@@ -24,8 +24,8 @@ jobs:
       - name: upload the report to github repo 
         uses: actions/upload-artifact@v4
         with: 
-         name: README.md
-         path: https://github.com/Manjunath-Kapanaiah/REMOTE/blob/7172b4f71a19b27abb146625b11183b1997acfae/
+         name: package.json
+         path: https://github.com/Manjunath-Kapanaiah/REMOTE/blob/7172b4f71a19b27abb146625b11183b1997acfae/package.json
       - name: Build code 
         run: npm run build 
 
