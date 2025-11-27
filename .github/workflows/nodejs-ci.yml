@@ -14,8 +14,8 @@ jobs:
 
     env:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      SONAR_PROJECT_KEY: your_project_key_here
-      SONAR_ORG: your_org_name_here
+      SONAR_PROJECT_KEY: Manjunath-Kapanaiah_REMOTE
+      SONAR_ORG: manjunath-kapanaiah
       SONAR_HOST_URL: https://sonarcloud.io
 
     steps:
