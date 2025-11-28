@@ -1,5 +1,5 @@
 ---
-name: build nodejs Application
+name: MATRIX BUILS NODEJS WITH SONAR
 on:
   workflow_dispatch:
   push: null
@@ -39,6 +39,7 @@ jobs:
         run: echo 'Deploy the code'
 job2:
   needs: job1
+  runs-on: ubuntu-latest
   uploadfile:
     runs-on: ubuntu-latest
     steps:
