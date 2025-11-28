@@ -1,11 +1,12 @@
-name: Workflow B
+name: WORKFLOW B
 
 on:
   repository_dispatch:
-    types: [run-workflow-b]
+    types: [trigger-file-b]
 
 jobs:
-  build:
+  run_b:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Workflow B started"
+      - name: Show message
+        run: echo "Workflow B triggered successfully!"
