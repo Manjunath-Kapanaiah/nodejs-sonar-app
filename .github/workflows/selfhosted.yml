@@ -3,7 +3,7 @@ on:
  workflow_dispatch:
  push:
 jobs: 
-  job1:
+  SELF_HOSSTED:
    continue-on-error: true
    runs-on: self-hosted
    steps: 
