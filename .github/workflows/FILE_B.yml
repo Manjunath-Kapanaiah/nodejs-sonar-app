@@ -1,0 +1,11 @@
+name: Workflow B
+
+on:
+  repository_dispatch:
+    types: [run-workflow-b]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Workflow B started"
