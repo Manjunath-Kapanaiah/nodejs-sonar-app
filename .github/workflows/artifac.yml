@@ -21,6 +21,13 @@ jobs:
         run: npm ci 
       - name: Run tests 
         run: npm test
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@v2
+        with:
+          projectBaseDir: .
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Debug folder structure
         run:
           pwd
