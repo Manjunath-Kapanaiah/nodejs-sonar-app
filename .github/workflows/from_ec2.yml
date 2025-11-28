@@ -1,0 +1,12 @@
+name: Workflow B Triggered by EC2
+
+on:
+  repository_dispatch:
+    types: [trigger-from-ec2]
+
+jobs:
+  run_from_ec2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug event
+        run: echo "Workflow triggered by EC2!"
