@@ -1,8 +1,8 @@
 ---
 name: MATRIX NODEJS BUILD WITH SONAR
 on:
-  workflow_dispatch: null
-  push: null
+  workflow_dispatch:
+  push:
 jobs:
   job1:
     continue-on-error: true
