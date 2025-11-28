@@ -1,6 +1,8 @@
 # --- Core testing dependencies ---
 pytest
 pytest-cov
+coverage
+
 
 # --- Linting (optional but recommended) ---
 flake8
@@ -18,3 +20,5 @@ mypy
 # requests
 # numpy
 # pandas
+
+
