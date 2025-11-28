@@ -28,7 +28,7 @@ jobs:
       - name: upload the report to github repo 
         uses: actions/upload-artifact@v4
         with: 
-         name: trigger.txt
+         name: fetch
          path: /home/runner/work/nodejs-sonar-app/nodejs-sonar-app
       - name: Build code 
         run: npm run build 
