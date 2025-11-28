@@ -1,5 +1,5 @@
 ---
-name: build nodejs Application
+name: MATRIX NODEJS BUILD WITH SONAR
 on:
   workflow_dispatch: null
   push: null
