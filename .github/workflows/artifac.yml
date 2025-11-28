@@ -31,5 +31,5 @@ jobs:
          name: fetch
          path: /home/runner/work/nodejs-sonar-app/nodejs-sonar-app
       - name: Build code 
-        run: npm run build s
+        run: npm run bui
 
