@@ -1,0 +1,23 @@
+---
+name: Build Python workflow
+on:
+  workflow_dispatch: null
+  push: null
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: CHECKOUT CODE
+        uses: actions/checkout@v5
+      - name: SETUP PYTHON
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ vars.PYTHON_VERSION }}
+      - name: Install dependencies
+        run: pip install --upgrade pip pip install -r requirements.txt
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$GITHUB_WORKSPACE" >> $GITHUB_ENV
+      - name: Run tests
+        env:
+          mycmd: ${{ vars.PYTHONCMD }}
+        run: $mycmd
