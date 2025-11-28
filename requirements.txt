@@ -1,0 +1,20 @@
+# --- Core testing dependencies ---
+pytest
+pytest-cov
+
+# --- Linting (optional but recommended) ---
+flake8
+
+# --- Code coverage tool ---
+coverage
+
+# --- Formatting (optional) ---
+black
+
+# --- Type checking (optional) ---
+mypy
+
+# --- Add project-specific libraries below (example) ---
+# requests
+# numpy
+# pandas
