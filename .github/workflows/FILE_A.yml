@@ -1,6 +1,7 @@
 name: TRIGGERS B FROM A
 
 on:
+  workflow_dispatch:
   push:
 
 jobs:
